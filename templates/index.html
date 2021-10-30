@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='mainpage.css') }}">
+    
+  </head>
+<body>
+    <div class="tit"><h1>MUSHROOM CLASS PREDICTION</h1>  </div>
+    
+
+  <div class="div1"> <form action="/result" method="post">
+        
+        <select style='font-weight: bolder;' style="size: 3cm;" name="cap-shape" required >
+            <option value="" selected disabled hidden>**CAP-SHAPE**</option>
+            <option value="bell">BELL</option>
+            <option value="conical">CONICAL</option>
+            <option value="convex">CONVEX</option>
+            <option value="flat">FLAT</option>
+            <option value="knobbed">KNOBBED</option> 
+            <option value="sunken">SUNKEN</option>                                   
+          </select><BR><BR>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="cap-surface" id="cap-surface" required>
+            <option value="" selected disabled hidden>**CAP-SURFACE**</option>
+            <option value="fibrous">FIBROUS</option>
+            <option value="grooves">GROOVES</option> 
+            <option value="scaly">SCALY</option>
+            <option value="smooth">SMOOTH</option>                      
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="cap-color" id="cap-color" required>
+            <option value="" selected disabled hidden>**CAP-COLOR**</option>
+            <option value="brown">BROWN</option>
+            <option value="buff">BUFF</option>
+            <option value="cinnamon">CINNAMON</option>
+            <option value="gray">GRAY</option>
+            <option value="green">GREEN</option>
+            <option value="pink">PINK</option>                       
+            <option value="purple">PURPLE</option>
+            <option value="red">RED</option>
+            <option value="white">WHITE</option>
+            <option value="yellow">YELLOW</option>
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="bruises" id="bruises" required>
+            <option value="" selected disabled hidden>**BURISES**</option>
+            <option value="bruises">BRUISES</option>
+            <option value="no">NO</option>                       
+          </select><BR><BR>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="odor" id="odor" required>
+            <option value="" selected disabled hidden>**ODOR**</option>
+            <option value="almond">ALMOND</option>
+            <option value="creosote">CREOSOTE</option>
+            <option value="fishy">FISHY</option>
+            <option value="foul">FOUL</option>                          
+            <option value="musty">MUSTY</option>
+            <option value="none">NONE</option>   
+            <option value="pungent">PUNGENT</option>
+            <option value="spicy">SPICY</option>   
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="gill-attachment" id="gill-attachment" required>
+            <option value="" selected disabled hidden>**GILL-ATTACHMENT**</option>
+            <option value="attached">ATTACHED</option>
+            <option value="free">FREE</option>                        
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="gill-spacing" id="gill-spacing" required>
+            <option value="" selected disabled hidden>**GILL-SPACING**</option>
+            <option value="close">CLOSE</option>
+            <option value="crowded">CROWDED</option>                  
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="gill-size" id="gill-size" required>
+            <option value="" selected disabled hidden>**GILL-SIZE**</option>
+            <option value="broad">BROAD</option>
+            <option value="narrow">NARROW</option>                       
+          </select><BR><BR>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="gill-color" id="gill-color" required>
+            <option value="" selected disabled hidden>**GILL-COLOR**</option>
+            <option value="black">BLACK</option>
+            <option value="brown">BROWN</option> 
+            <option value="buff">BUFF</option>
+            <option value="chocolate">CHOCLATE</option> 
+            <option value="gray">GRAY</option>
+            <option value="green">GREEN</option> 
+            <option value="orange">ORANGE</option>
+            <option value="pink">PINK</option> 
+            <option value="purple">PURPLE</option>
+            <option value="red">RED</option>
+            <option value="white">WHITE</option>
+            <option value="yellow">YELLOW</option>                       
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="stalk-shape" id="stalk-shape" required>
+            <option value="" selected disabled hidden>**STALK-SHAPE**</option>
+            <option value="enlarging">ENLARGING</option>
+            <option value="tapering">TAPERING</option>                       
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="stalk-root" id="stalk-root" required>
+            <option value="" selected disabled hidden>**STALK-ROOT**</option>
+            <option value="bulbous">BULBOUS</option>
+            <option value="club">CLUB</option>
+            <option value="equal">EQUAL</option>
+            <option value="missing">MISSING</option>                       
+          </select>
+
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="stalk-surface-above-ring" id="stalk-surface-above-ring" required>
+            <option value="" selected disabled hidden>**STALK-SURFACE-ABOVE-RING**</option>
+            <option value="fibrous">FIBROUS</option>
+            <option value="scaly">SCALY</option> 
+            <option value="silky">SILKY</option>
+            <option value="smooth">SMOOTH</option>                       
+          </select><BR><BR>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="stalk-surface-below-ring" id="stalk-surface-below-ring" required>
+            <option value="" selected disabled hidden>**STALK-SURFACE-BELOW-RING**</option>
+            <option value="fibrous">FIBROUS</option>
+            <option value="scaly">SCALY</option> 
+            <option value="silky">SILKY</option>
+            <option value="smooth">SMOOTH</option>                        
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="stalk-color-above-ring" id="stalk-color-above-ring" required>
+            <option value="" selected disabled hidden>**STALK-COLOR-ABOVE-RING**</option>
+            <option value="brown">BROWN</option> 
+            <option value="buff">BUFF</option>
+            <option value="cinnamon">CINNAMON</option> 
+            <option value="gray">GRAY</option>
+            <option value="orange">ORANGE</option>
+            <option value="pink">PINK</option>
+            <option value="red">RED</option>
+            <option value="white">WHITE</option>
+            <option value="yellow">YELLOW</option>                      
+          </select>
+
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="stalk-color-below-ring" id="stalk-color-below-ring" required>
+            <option value="" selected disabled hidden>**STALK-COLOR-BELOW-RING**</option>
+            <option value="brown">BROWN</option> 
+            <option value="buff">BUFF</option>
+            <option value="cinnamon">CINNAMON</option> 
+            <option value="gray">GRAY</option>
+            <option value="orange">ORANGE</option>
+            <option value="pink">PINK</option>
+            <option value="red">RED</option>
+            <option value="white">WHITE</option>
+            <option value="yellow">YELLOW</option>                        
+          </select><BR><BR>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="veil-type" id="veil-type" required>
+            <option value="" selected disabled hidden>**VEIL-TYPE**</option>
+            <option value="partial">PARTIAL</option>                 
+          </select>
+
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="veil-color" id="veil-color" required>
+            <option value="" selected disabled hidden>**VEIL-COLOR**</option>
+            <option value="brown">BROWN</option>
+            <option value="orange">ORANGE</option>
+            <option value="white">WHITE</option>
+            <option value="yellow">YELLOW</option>                        
+          </select>
+
+
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="ring-number" id="ring-number" required> 
+            <option value="" selected disabled hidden>**RING-NUMBER**</option>
+            <option value="none">NONE</option>
+            <option value="one">ONE</option>
+            <option value="two">TWO</option>                       
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="ring-type" id="ring-type" required>
+            <option value="" selected disabled hidden>**RING-TYPE**</option>
+            <option value="evanescent">EVANESCENT</option>
+            <option value="flaring">FLARING</option>
+            <option value="large">LARGE</option>
+            <option value="pendant">PENDANT</option>
+            <option value="none">NONE</option>                       
+          </select><BR><BR>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="spore-print-color" id="spore-print-color" required>
+            <option value="" selected disabled hidden>**SPORE-PRINT-COLOR**</option>
+            <option value="black">BLACK</option>
+            <option value="brown">BROWN</option> 
+            <option value="buff">BUFF</option>
+            <option value="choclate">CHOCOLATE</option>
+            <option value="green">GREEN</option> 
+            <option value="orange">ORANGE</option>
+            <option value="purple">PURPLE</option>
+            <option value="white">WHITE</option>
+            <option value="yellow">YELLOW</option>                      
+          </select>
+
+          <select style='font-weight: bolder;' style="size: 3cm;" name="population" id="population" required>
+            <option value="" selected disabled hidden>**POPULATION**</option>
+            <option value="abundant">ABUNDANT</option>
+            <option value="clustered">CLUSTERED</option>
+            <option value="numerous">NUMEROUS</option>
+            <option value="scattered">SCATTERED</option> 
+            <option value="several">SEVERAL</option>
+            <option value="solitary">SOLITARY</option>                        
+          </select><BR><BR>
+
+            <select style='font-weight: bolder;' style="size: 3cm;" name="habitat" id="habitat" required>
+              <option value="" selected disabled hidden>**HABITATE**</option>
+              <option value="grasses">GRASSES</option>
+              <option value="leaves">LEAVES</option>
+              <option value="meadows">MEADOWS</option>
+              <option value="paths">PATH</option>
+              <option value="urban">URBAN</option>
+              <option value="waste">WASTE</option>
+              <option value="woods">WOODS</option>                        
+            </select><BR>
+            <BR><BR>
+                    
+        <input type="submit"  name="submit" value="PREDICT">  <br><BR><BR><BR><h6>CLICK ME FOR AUTHOR</h6>
+        <a href="https://github.com/SanthoshNagaraj94">
+          <img alt="Qries" src="static/github.png"
+          width="80" height="80">
+      
+
+        
+         </form>
+         <br>
+      </div> 
+     
+</body>
+</html>

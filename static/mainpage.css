@@ -1,0 +1,49 @@
+body
+{   align-items:auto;
+    background-color: rgba(255, 255, 255, 0.13);
+    background-image: url(mushroom.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+.tit{
+    font-family:cursive;
+    font-size: 1cm;      
+   border-color: rgb(74, 210, 251);   
+   border-spacing: 0.5cm;
+   color: rgb(31, 29, 29);        
+    text-align: center;      
+
+}
+
+.div1
+{ text-align: center;
+   font-weight: bolder;
+    padding-top: 1cm;
+    padding-bottom: 0.5cm;
+   background-color: rgb(216, 240, 245);
+   opacity: 40%;
+    text-align: center;
+   
+    border-style: groove;      
+    }
+
+input
+{  color: black;
+    font-size: 0.75cm;
+    text-align: center;
+    font-weight: bolder;
+    box-sizing: border-box;   
+    border-style: groove;   
+    text-shadow: black;
+    
+}
+
+select
+{  
+    font-size: larger;
+    text-align: center;
+    font-weight: bolder;
+}
