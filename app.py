@@ -1,10 +1,10 @@
 from flask import Flask, redirect,render_template,request,url_for
 import pickle
 model = open('model.pkl','rb')
-Model = pickle.load(model)
+model = pickle.load(model)
 
-scales = open('scale.pkl','rb')
-scale = pickle.load(scales)
+encode = open('encode.pkl','rb')
+encode = pickle.load(encode)
 
 
 app = Flask('app')
@@ -44,10 +44,9 @@ def result():
       habitat = request.form['habitat']
 
       features=[[cap_shape,cap_surface,cap_color,bruises,odor,gill_attachment,gill_spacing,gill_size,gill_color,stalk_shape,stalk_root,stalk_surface_above_ring,stalk_surface_below_ring,stalk_color_above_ring,stalk_color_below_ring,veil_type,veil_color,ring_number,ring_type,spore_print_color,population,habitat]]
-      X_scale=scale.transform(features)
+      X_encode=encode.transform(features)
 
-      predict=Model.predict(X_scale)
-
+      predict=model.predict(X_encode)
       if predict=='edible':
             return render_template('edible.html')
       
